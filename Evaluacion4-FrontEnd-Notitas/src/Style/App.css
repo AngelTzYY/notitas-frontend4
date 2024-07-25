@@ -1,0 +1,35 @@
+/* Estilo para centrar el contenido de la aplicación */
+.App {
+  text-align: center;
+}
+
+/* Contenedor de notas, utilizando flexbox para el diseño */
+.notes-container {
+  display: flex; /* Utiliza flexbox para el diseño de los elementos hijos */
+  flex-wrap: wrap; /* Permite que los elementos hijos se ajusten en varias filas */
+  justify-content: center; /* Centra los elementos hijos horizontalmente */
+  border: 2px solid #ccc; /* Borde gris alrededor del contenedor */
+  padding: 20px; /* Espaciado interno del contenedor */
+  border-radius: 10px; /* Bordes redondeados */
+  max-width: 800px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  background-color: #71746f; /* Color de fondo gris oscuro */
+}
+
+/* Estilo para el formulario */
+form {
+  margin: 20px; /* Espaciado externo alrededor del formulario */
+}
+
+/* Estilo para los campos de entrada */
+input {
+  margin: 5px; /* Espaciado externo alrededor de los campos de entrada */
+  padding: 10px; /* Espaciado interno dentro de los campos de entrada */
+  font-size: 16px; /* Tamaño de fuente de los campos de entrada */
+}
+
+/* Estilo para los botones */
+button {
+  padding: 10px 20px; /* Espaciado interno horizontal y vertical dentro de los botones */
+  font-size: 16px; /* Tamaño de fuente de los botones */
+}

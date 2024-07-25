@@ -1,0 +1,348 @@
+/* Estilo global para el cuerpo de la página */
+body {
+  font-family: Arial, sans-serif; /* Fuente principal */
+  background-color: #3b3b3b; /* Color de fondo oscuro */
+  margin: 0; /* Sin margen */
+  padding: 0; /* Sin relleno */
+  color: white; /* Texto blanco */
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 1000px; /* Ancho máximo */
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 20px; /* Relleno */
+}
+
+/* Encabezado */
+.header {
+  background-color: #666; /* Fondo gris oscuro */
+  border-radius: 8px; /* Bordes redondeados */
+  padding-bottom: 20px; /* Relleno inferior */
+}
+
+.header h1 {
+  margin: 0; /* Sin margen */
+  font-size: 2em; /* Tamaño de fuente grande */
+  color: #fff; /* Texto blanco */
+  text-align: center; /* Texto centrado */
+  margin-bottom: 20px; /* Espaciado inferior */
+  font-family: 'Arial', sans-serif; /* Fuente del título */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra al texto */
+}
+
+.header .form-control, .header .btn {
+  margin-bottom: 10px; /* Espaciado inferior */
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.header .form-control:focus {
+  transform: scale(1.05); /* Escala al enfocar */
+}
+
+.header .btn {
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+.header .btn:hover {
+  background-color: #555; /* Cambio de fondo al pasar el cursor */
+  transform: scale(1.05); /* Escala al pasar el cursor */
+}
+
+.header .btn-dark {
+  background-color: #222; /* Fondo oscuro */
+  border: none; /* Sin borde */
+  color: #fff; /* Texto blanco */
+  padding: 10px 20px; /* Relleno */
+  border-radius: 4px; /* Bordes redondeados */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra */
+  margin-top: 10px; /* Espaciado superior */
+}
+
+/* Contenedor de notas */
+.notes {
+  display: flex; /* Diseño flexible */
+  flex-wrap: wrap; /* Flex en varias filas */
+  gap: 20px; /* Espaciado entre notas */
+  justify-content: center; /* Centrado horizontal */
+  margin-top: 20px; /* Espaciado superior */
+}
+
+/* Nota individual */
+.note {
+  width: 250px; /* Ancho fijo */
+  height: 250px; /* Altura fija */
+  background-color: #fefe39f1; /* Fondo amarillo */
+  color: #333; /* Texto oscuro */
+  padding: 20px; /* Relleno */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+  position: relative; /* Posición relativa */
+  display: flex; /* Diseño flexible */
+  flex-direction: column; /* Dirección de columna */
+  word-wrap: break-word; /* Ajuste de palabras */
+  transform: rotate(-3deg); /* Rotación ligera */
+  transition: box-shadow 0.3s ease; /* Transición suave */
+}
+
+.note:nth-child(2n) {
+  transform: rotate(2deg); /* Rotación alternativa */
+}
+
+.note:hover {
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.7); /* Sombra al pasar el cursor */
+}
+
+.note.important {
+  background-color: #ff6355; /* Fondo rojo para notas importantes */
+}
+
+.note h3 {
+  margin: 0 0 10px; /* Sin margen superior, margen inferior */
+  font-size: 1.2em; /* Tamaño de fuente */
+  font-family: 'Arial Black', sans-serif; /* Fuente del título */
+}
+
+.note-content {
+  flex-grow: 1; /* Crecimiento flexible */
+  overflow: hidden; /* Ocultar desbordamiento */
+}
+
+.note-content p {
+  margin: 0; /* Sin margen */
+  white-space: nowrap; /* Sin ajuste de línea */
+  text-overflow: ellipsis; /* Elipsis al desbordar */
+  overflow: hidden; /* Ocultar desbordamiento */
+  font-family: 'Arial Narrow', sans-serif; /* Fuente para la descripción */
+}
+
+/* Modal para mostrar notas seleccionadas */
+.modal {
+  position: fixed; /* Posición fija */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  display: flex; /* Diseño flexible */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+}
+
+.modal-content {
+  padding: 20px; /* Relleno */
+  border-radius: 5px; /* Bordes redondeados */
+  max-width: 500px; /* Ancho máximo */
+  width: 80%; /* Ancho flexible */
+  text-align: center; /* Texto centrado */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+  position: relative; /* Posición relativa */
+  display: flex; /* Diseño flexible */
+  flex-direction: column; /* Dirección de columna */
+  word-wrap: break-word; /* Ajuste de palabras */
+}
+
+.modal-content.important {
+  background-color: #ff6355; /* Fondo rojo para notas importantes */
+}
+
+.modal-content h2 {
+  margin-top: 0; /* Sin margen superior */
+}
+
+.modal-content p {
+  margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+.modal-content .btn {
+  margin-top: 20px; /* Espaciado superior */
+}
+
+.note-content p.full {
+  white-space: normal; /* Ajuste normal de línea */
+  overflow: visible; /* Desbordamiento visible */
+}
+
+/* Pie de nota */
+.note-footer {
+  display: flex; /* Diseño flexible */
+  justify-content: space-between; /* Espaciado entre elementos */
+  align-items: center; /* Alineación vertical */
+  margin-top: 10px; /* Espaciado superior */
+}
+
+.note button {
+  margin-top: 5px; /* Espaciado superior */
+}
+
+/* Botón plano */
+.btn-flat {
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  color: #007bff; /* Texto azul */
+  cursor: pointer; /* Cursor de puntero */
+  padding: 0; /* Sin relleno */
+  font-size: 0.875rem; /* Tamaño de fuente */
+  display: inline-block; /* Diseño en línea */
+  text-decoration: underline; /* Subrayado */
+}
+
+.btn-flat:focus {
+  outline: none; /* Sin contorno */
+}
+
+.btn-flat:hover {
+  text-decoration: underline; /* Subrayado */
+  color: #0056b3; /* Texto azul oscuro */
+}
+
+/* Estilo personalizado para el checkbox y su etiqueta */
+.custom-checkbox {
+  display: flex; /* Diseño flexible */
+  align-items: center; /* Alineación vertical */
+}
+
+.custom-checkbox input[type="checkbox"] {
+  display: none; /* Ocultar checkbox */
+}
+
+.custom-checkbox input[type="checkbox"] + label {
+  position: relative; /* Posición relativa */
+  padding-left: 25px; /* Relleno izquierdo */
+  cursor: pointer; /* Cursor de puntero */
+  color: #fff; /* Texto blanco */
+}
+
+.custom-checkbox input[type="checkbox"] + label:before {
+  content: ""; /* Contenido vacío */
+  position: absolute; /* Posición absoluta */
+  left: 0;
+  top: 0;
+  width: 18px; /* Ancho */
+  height: 18px; /* Altura */
+  border: 2px solid #fff; /* Borde blanco */
+  border-radius: 4px; /* Bordes redondeados */
+  background-color: #666; /* Fondo gris oscuro */
+  transition: background-color 0.3s; /* Transición suave */
+}
+
+.custom-checkbox input[type="checkbox"]:checked + label:before {
+  background-color: #28a745; /* Fondo verde al seleccionar */
+  border-color: #28a745; /* Borde verde al seleccionar */
+}
+
+.custom-checkbox input[type="checkbox"] + label svg {
+  position: absolute; /* Posición absoluta */
+  left: 2px; /* Posición izquierda */
+  top: 2px; /* Posición superior */
+  width: 14px; /* Ancho */
+  height: 14px; /* Altura */
+  fill: none; /* Sin relleno */
+  stroke: #fff; /* Trazo blanco */
+  stroke-width: 2px; /* Ancho del trazo */
+  opacity: 0; /* Opacidad */
+  transition: opacity 0.3s; /* Transición suave */
+}
+
+.custom-checkbox input[type="checkbox"]:checked + label svg {
+  opacity: 1; /* Opacidad total al seleccionar */
+}
+
+/* Grupo de entrada */
+.input-group {
+  position: relative; /* Posición relativa */
+  display: flex; /* Diseño flexible */
+  flex-direction: column; /* Dirección de columna */
+}
+
+#error-message {
+  font-size: 0.875rem; /* Tamaño de fuente */
+  color: red; /* Texto rojo */
+  margin-top: 5px; /* Espaciado superior */
+  width: 100%; /* Ancho completo */
+  text-align: center; /* Texto centrado */
+  background-color: black; /* Fondo negro */
+  padding: 10px; /* Relleno */
+  border-radius: 5px; /* Bordes redondeados */
+  display: none; /* Ocultar por defecto */
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3); /* Sombra al texto */
+}
+
+/* Estilos para pantallas más pequeñas */
+@media (max-width: 992px) {
+  .note {
+    width: calc(50% - 40px); /* Ancho adaptativo */
+  }
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1.5em; /* Tamaño de fuente */
+  }
+
+  .header .form-control, .header .btn {
+    width: 100%; /* Ancho completo */
+  }
+  
+  .note {
+    width: calc(100% - 40px); /* Ancho adaptativo */
+  }
+
+  .btn-flat {
+    font-size: 0.75rem; /* Tamaño de fuente */
+  }
+}
+
+/* Mensaje de error */
+.error-message {
+  width: 100%; /* Ancho completo */
+  font-size: 1rem; /* Tamaño de fuente */
+  background-color: black; /* Fondo negro */
+  color: red; /* Texto rojo */
+  padding: 10px; /* Relleno */
+  border-radius: 5px; /* Bordes redondeados */
+  display: none; /* Ocultar por defecto */
+}
+
+/* Estilo del título */
+.simulator {
+  margin: 0; /* Sin margen */
+  font-size: 2.5em; /* Tamaño de fuente grande */
+  color: #fff; /* Texto blanco */
+  text-align: center; /* Texto centrado */
+  margin-bottom: 20px; /* Espaciado inferior */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fuente del título */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra al texto */
+}
+
+.btn-link {
+  color: blue; /* color del boton */
+}
+
+.btn-link:hover {
+  color: white; /* cambio de color encima del boton ver mas */
+}
+
+/* Estilo base para las notas */
+.note {
+  transition: transform 0.3s ease;
+}
+
+/* Estilo para el efecto de zoom */
+.note:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo para el enlace de Ver más */
+.btn-link {
+  color: blue;
+}
+
+.btn-link:hover {
+  color: white;
+}
+
+/* Estilo para el modal sin animación */
+.modal-content {
+  transition: none !important;
+}

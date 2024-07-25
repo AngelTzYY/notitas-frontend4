@@ -1,0 +1,65 @@
+/* Estilo para el formulario de notas */
+.note-form {
+    display: flex; /* Utiliza flexbox para el diseño de los elementos hijos */
+    flex-direction: column; /* Organiza los elementos hijos en una columna */
+    align-items: center; /* Centra los elementos hijos horizontalmente */
+    background-color: #444; /* Color de fondo gris oscuro */
+    padding: 20px; /* Espaciado interno del formulario */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+}
+
+/* Estilo para los campos de entrada del formulario */
+.form-input {
+    width: 100%; /* Ancho completo */
+    max-width: 400px; /* Ancho máximo */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espaciado inferior */
+    border: 2px solid #666; /* Borde gris oscuro */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #555; /* Color de fondo gris */
+    color: #fff; /* Color de texto blanco */
+    font-size: 1rem; /* Tamaño de fuente */
+}
+
+/* Estilo para el texto de los marcadores de posición (placeholders) */
+.form-input::placeholder {
+    color: #aaa; /* Color gris claro */
+}
+
+/* Estilo para las etiquetas del formulario */
+.form-label {
+    display: flex; /* Utiliza flexbox para el diseño de los elementos hijos */
+    align-items: center; /* Alinea los elementos hijos verticalmente al centro */
+    color: #fff; /* Color de texto blanco */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+/* Estilo para el checkbox del formulario */
+.form-checkbox {
+    margin-left: 10px; /* Espaciado izquierdo */
+}
+
+/* Estilo para el botón del formulario */
+.form-button {
+    padding: 10px 20px; /* Espaciado interno horizontal y vertical */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #222; /* Color de fondo gris oscuro */
+    color: #fff; /* Color de texto blanco */
+    font-size: 1rem; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+/* Estilo para el botón al pasar el cursor por encima */
+.form-button:hover {
+    background-color: #555; /* Cambia el color de fondo */
+    transform: scale(1.05); /* Aumenta el tamaño */
+}
+
+/* Estilo para el botón al estar enfocado */
+.form-button:focus {
+    outline: none; /* Sin contorno */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Sombra blanca */
+}

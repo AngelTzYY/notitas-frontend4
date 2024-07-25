@@ -1,0 +1,35 @@
+.post-it {
+  background-color: #e0e40c; /* Color gris para todas las notas */
+  width: 150px;        /* Ajustar tamaño */
+  height: 150px;       /* Ajustar tamaño */
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(10, 10, 10, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.5s; /* Para agregar animación */
+  transform: rotate(-2deg); /* Rotación inicial */
+}
+
+.post-it h2 {
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.post-it p {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Clase para notas importantes */
+.post-it.important {
+  background-color: #ff4d4d; /* Fondo rojo para notas importantes */
+  color: rgba(255, 255, 255, 0.884); /* Texto blanco para mejor legibilidad */
+  transform: rotate(2deg); /* Rotación para notas importantes */
+}
